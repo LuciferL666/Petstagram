@@ -10,3 +10,4 @@
  * B Add static middleware
  * C Add body parser
  * D Add routes
+4. Add static resources 
