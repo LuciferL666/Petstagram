@@ -1,0 +1,23 @@
+{
+  "name": "petstagram",
+  "version": "1.0.0",
+  "description": "Exam Preperation full Project with full Info Template document",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuciferL666/Petstagram.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuciferL666/Petstagram/issues"
+  },
+  "homepage": "https://github.com/LuciferL666/Petstagram#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
