@@ -7,3 +7,6 @@
  - npm i -D nodemon
 3. Install and setup express
  - npm i express
+ * B Add static middleware
+ * C Add body parser
+ * D Add routes
