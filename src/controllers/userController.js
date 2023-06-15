@@ -1,4 +1,6 @@
-const router = require('express').Router() //9. A
+const router = require('express').Router(); //9. A
+
+const userManager = require('../managers/userManager'); //11. B
 
 router.get('/login', (req, res) =>{//9. A
 res.render('users/login') //9. C
