@@ -3,7 +3,7 @@ const router = require('express').Router();
 
 //TODO: ADD CONTROLLER ROUTES
 router.get('/', (req, res) =>{
-    res.send('first action')
+    res.render('home') //6. E
 });
 
 module.exports = router

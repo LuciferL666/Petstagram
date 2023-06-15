@@ -21,3 +21,6 @@
  * B, Config extension
  * C, Config views folder (only if src is used)
  * D, Create folder layout with file main for main parts of html 
+ * Add partials folder (creating in folder views partials folder)
+ - E, Render home page (in router and making home.html to home.hbs)
+ * F, Fix static paths (to fix it can rename public folder to static or remove static in main.hbs from: src="/static/images/ and from: /static/css/styles.css)
