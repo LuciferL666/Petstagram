@@ -24,3 +24,5 @@
  * Add partials folder (creating in folder views partials folder)
  - E, Render home page (in router and making home.html to home.hbs)
  * F, Fix static paths (to fix it can rename public folder to static or remove static in main.hbs from: src="/static/images/ and from: /static/css/styles.css)
+7. A, Add controllers folder with home controller(create Controllers folder in src with file home Controller) 
+ - B, Moving render home from routers file to homeController file

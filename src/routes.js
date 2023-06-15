@@ -1,9 +1,7 @@
-//3 D
-const router = require('express').Router();
+const router = require('express').Router(); //3 D
 
-//TODO: ADD CONTROLLER ROUTES
-router.get('/', (req, res) =>{
-    res.render('home') //6. E
-});
+const homeController = require('./controllers/homeController') //7. B
 
-module.exports = router
+router.use(homeController); //7. B
+
+module.exports = router; //3 D
