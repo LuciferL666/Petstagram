@@ -40,3 +40,6 @@
  - Edit login page by removing all accept 'main' and rename to hbs
  * fix header navigation to login and register simply by making link for Login    
    looks like this (href="/users/login" and Register "href="/users/register" and Logout "href="/users/logout"")
+ * D, Render register page in file user controller
+ - Also we need to move register.html to folder user, edit register by delete all accept main and rename to hbs
+10. A, Add user model (create folder models in src with file User.js)
