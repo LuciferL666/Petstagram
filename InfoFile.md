@@ -48,3 +48,6 @@
  * B, Require in user controller (in userController.js)
 12. A, Modify login and register forms (in login.hbs and register.hbs) 
 13. A, Add login and register post actions (in userController.js)
+14. A, Implement user manager login and register in (userController.js)
+  * Add register method
+  * Add login method
