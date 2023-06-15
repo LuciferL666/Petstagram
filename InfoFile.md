@@ -43,6 +43,8 @@
  * D, Render register page in file user controller
  - Also we need to move register.html to folder user, edit register by delete all accept main and rename to hbs
 10. A, Add user model (create folder models in src with file User.js)
+ * B, Add unique index for username
+ * C, Validate repeat password
 11. Add user manager (create folder managers in src with file userManager.js)
  * A, Add login and register methods (empty)
  * B, Require in user controller (in userController.js)
