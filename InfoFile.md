@@ -23,9 +23,20 @@
  * D, Create folder layout with file main for main parts of html 
  * Add partials folder (creating in folder views partials folder)
  - E, Render home page (in router and making home.html to home.hbs)
- * F, Fix static paths (to fix it can rename public folder to static or remove static in main.hbs from: src="/static/images/ and from: /static/css/styles.css)
+ * F, Fix static paths (to fix it can rename public folder to static or remove  
+    static in main.hbs from: src="/static/images/ and from: /static/css/styles.css)
+  * Rework link to <!-- Link to Home Page --> simply like this ('<a href="/">'    
+    and also this <a class="home" href="/">)
 7. A, Add controllers folder with home controller(create Controllers folder in src with file home Controller) 
  - B, Moving render home from routers file to homeController file
 8. Add database 
  * Install mongoose (npm i mongoose)
  * A, Connect data base (IN INDEX)
+9. Authentication
+ * A, Add user controller (in folder controller file userController)
+ * B, Add controllers to file routes
+ * C, Render login page (in file userController)
+ - Make file "users" in folder views and move login.html
+ - Edit login page by removing all accept 'main' and rename to hbs
+ * fix header navigation to login and register simply by making link for Login    
+   looks like this (href="/users/login" and Register "href="/users/register" and Logout "href="/users/logout"")

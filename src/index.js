@@ -8,9 +8,9 @@ const routes = require('./routes') // 3. D
 const app = express(); // 3. A
 
 //TODO CHANGE DB NAME
-mongoose.connect(`mongodb://localhost:27017/Petstagram`)
-.then(() => console.log('DB connected successfully'))
-.catch(err => console.log('DB Error, ', err.message));
+mongoose.connect(`mongodb://localhost:27017/Petstagram`) //8. A
+.then(() => console.log('DB connected successfully')) //8. A
+.catch(err => console.log('DB Error, ', err.message)); //8. A
 
 
 app.engine('hbs', handlebars.engine({ // 6. A
