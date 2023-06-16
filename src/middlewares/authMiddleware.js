@@ -19,3 +19,10 @@ res.redirect('/users/login') //20. F
   next(); //20. C
 } //20. C
 } //20. A 
+
+exports.isAuth = (req, res, next) => { //21. A
+  if(!req.user){ //21. A
+  return  res.redirect('/users/login') //21. A
+  } //21. A
+next();  //21. A
+}  //21. A

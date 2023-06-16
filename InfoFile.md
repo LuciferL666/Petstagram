@@ -76,3 +76,4 @@
   - D, create folder config in src with file config.js and move SECRET and export it (OPTIONAL)
   * E, Attach decoded token to request
   * F, handle invalid token (authMiddleware and config.js, userController.js)
+21. A, Authorization middleware (in authMiddleware)
