@@ -91,6 +91,7 @@
   * C, Pass error to render (in errorHandlerMiddleware.js)
   * D, Add local error handler (in usersController.js) 
 25. A, Automatically login after register(in userManager.js, move const payload to new function with name: generateToken, after in userController.js)  
+26. A, Keep username and email if forgot to write password or password missmatch while register 
 
   CTRL + P (:23 SEND TO 23 ROW)
   CTRL + P SEARCHING BETWEEN FILES

@@ -38,7 +38,7 @@ router.post('/register', async(req, res)=>{ //13. A
         res.cookie(TOKEN_KEY, token)//25. A
         res.redirect('/');  //18. B befor res.send(registered) //25. A('/')
     }catch (err) { //24. D
-res.render('users/register', { error: getErrorMessage(err) }); //24. D
+res.render('users/register', { error: getErrorMessage(err), username, email }); //24. D //26. A
     }
 });
 
