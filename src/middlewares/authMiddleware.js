@@ -9,6 +9,8 @@ if(token){  //20. C
 try {
 const decodedToken = await jwt.verify(token, SECRET);  //20. D
 req.user = decodedToken;  //20. E
+res.locals.user = decodedToken; //22. B
+res.locals.isAuthenticated = true; //22. B 
  next();
 } catch (err){
 res.clearCookie(TOKEN_KEY); //20. F

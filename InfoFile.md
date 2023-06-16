@@ -77,3 +77,6 @@
   * E, Attach decoded token to request
   * F, handle invalid token (authMiddleware and config.js, userController.js)
 21. A, Authorization middleware (in authMiddleware)
+22. A, Dynamic navigation(in main.hbs for login users, for guests and for logout)
+  * B, Add conditional in main layout(in authMiddleware)
+  * Add res locals

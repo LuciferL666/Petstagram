@@ -43,6 +43,30 @@
                             </a>
                         </li>
 
+
+
+                        <!--For login users-->
+                        {{#if isAuthenticated}} <!-- 22. A -->
+                        <li class="nav-item">
+                            <!-- Link to Add Photo Page -->
+                            <a href="#">
+                                <i>Add Photo</i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Link to Profile Page -->
+                            <a href="#">
+                                <i>Profile</i>
+                            </a>
+                        </li>
+                         <li class="nav-item">
+                            <!-- Link to 
+                             Page -->
+                            <a href="/users/logout">
+                                <i>Logout</i>
+                            </a>
+                        </li>
+                        {{else}} <!-- 22. A -->
                         <!--For Guest User-->
                         <li class="nav-item">
                             <!-- Link to Login Page -->
@@ -56,28 +80,10 @@
                                 <i>Register</i>
                             </a>
                         </li>
+                        {{/if}} <!-- 22. A -->
 
-                        <!--For login users-->
-                        <li class="nav-item">
-                            <!-- Link to Add Photo Page -->
-                            <a href="#">
-                                <i>Add Photo</i>
-                            </a>
-                        </li>
 
-                        <li class="nav-item">
-                            <!-- Link to Profile Page -->
-                            <a href="#">
-                                <i>Profile</i>
-                            </a>
-                        </li>
 
-                        <li class="nav-item">
-                            <!-- Link to Logout Page -->
-                            <a href="/users/logout">
-                                <i>Logout</i>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
