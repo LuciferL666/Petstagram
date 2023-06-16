@@ -60,3 +60,10 @@
 16. Login
   * A, Find user by username (in userManager.js)
   * B, Validate password with hash (in userManager.js)
+17. Generate jwt token
+  * install jsonwebtoken(npm i jsonwebtoken)
+  * A, promisify jsonwebtoken (optional) (making in src folder lib with file jwt.js)
+  * B, Generate token in manager.login(in userManager.js after in userController.js)
+18. Return token in cookie
+  * Install cookie parser(npm i cookie-parser)
+  * A, Config cookie parser(in index.js)
