@@ -25,8 +25,8 @@
  - E, Render home page (in router and making home.html to home.hbs)
  * F, Fix static paths (to fix it can rename public folder to static or remove  
     static in main.hbs from: src="/static/images/ and from: /static/css/styles.css)
-  * Rework link to <!-- Link to Home Page --> simply like this ('<a href="/">'    
-    and also this <a class="home" href="/">)
+  * Rework link to <!-- Link to Home Page --> simply like this <!--('<a href="/">' -->   
+    and also this <!-- <a class="home" href="/">") -->
 7. A, Add controllers folder with home controller(create Controllers folder in src with file home Controller) 
  - B, Moving render home from routers file to homeController file
 8. Add database 
@@ -44,7 +44,7 @@
  - Also we need to move register.html to folder user, edit register by delete all accept main and rename to hbs
 10. A, Add user model (create folder models in src with file User.js)
  * B, Add unique index for username
- * C, Validate repeat password
+ * C, Validate repeat (password IN User.js)
 11. Add user manager (create folder managers in src with file userManager.js)
  * A, Add login and register methods (empty)
  * B, Require in user controller (in userController.js)
@@ -53,3 +53,10 @@
 14. A, Implement user manager login and register in (userController.js)
   * Add register method
   * Add login method
+  * B, Validate if user already exists(in User.js and userManager.js)
+15. Hash password
+  * Install bcrypt(npm i bcrypt)
+  * A, Hash password
+16. Login
+  * A, Find user by username (in userManager.js)
+  * B, Validate password with hash (in userManager.js)
