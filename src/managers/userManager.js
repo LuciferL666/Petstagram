@@ -2,8 +2,8 @@ const bcrypt = require('bcrypt') //16. B
 
 const jwt = require('../lib/jwt'); //17. B
 const User = require('../models/User'); //11. A
-const SECRET = '29df4dcf-579a-4647-8d07-748db7d60839';  //17. B (GENERATE SECRET FROM generate uuid)
-
+// befor 17. B, after //20. D we move it in config.js const SECRET = '29df4dcf-579a-4647-8d07-748db7d60839';  //17. B (GENERATE SECRET FROM generate uuid)
+const { SECRET } = require('../config/config') //20. D //20. F
 
 exports.login = async (username, password) => { //11. A
                           //14. A

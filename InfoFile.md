@@ -68,3 +68,11 @@
   * Install cookie parser(npm i cookie-parser)
   * A, Config cookie parser(in index.js)
   * B, Set cookie with token(in userController.js)
+19. A, Logout (in userController.js)
+20. A, Authentication middleware(in src make new folder middlewares and in file authMiddleware.js)
+  * Create middleware
+  * B, Use middleware (in index.js)
+  * C, implement auth middleware(in authMiddleware.js)
+  - D, create folder config in src with file config.js and move SECRET and export it (OPTIONAL)
+  * E, Attach decoded token to request
+  * F, handle invalid token (authMiddleware and config.js, userController.js)
