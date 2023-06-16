@@ -84,4 +84,15 @@
   * A, Add 404 page( rename 404.html to hbs and delete all accept main, then make it in homeController.js then in routes.js)
   - Redirect missing route to 404
   * B, Add global error handling (OPTIONAL) (create new file in middlewares folder, errorHandlerMiddleware.js)
-24. Show ERROR notifications  
+  * C, add error message extractor (creating folder utils in src with file errorHelpers.js)
+24. Show ERROR notifications (in main.hbs and looking for error Container)
+  * A, Add error container to main layout
+  * B, Show error container conditionaly (in main.hbs)
+  * C, Pass error to render (in errorHandlerMiddleware.js)
+  * D, Add local error handler (in usersController.js) 
+25. A, Automatically login after register(in userManager.js, move const payload to new function with name: generateToken, after in userController.js)  
+
+  CTRL + P (:23 SEND TO 23 ROW)
+  CTRL + P SEARCHING BETWEEN FILES
+  CTRL + P SEAERCHING (INDEX:5 IT WILL SEND ME TO FILE INDEX TO 5 ROW)
+  CTRL + P AND @ (SEARCH BY SYMBOLS)
