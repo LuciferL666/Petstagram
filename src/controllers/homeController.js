@@ -5,4 +5,8 @@ router.get('/', (req, res) =>{
     res.render('home') //7. B
 });
 
+router.get('/404', (req, res)=>{ //23. A
+    res.render('404'); //23. A
+}); //23. A
+
 module.exports = router

@@ -80,3 +80,8 @@
 22. A, Dynamic navigation(in main.hbs for login users, for guests and for logout)
   * B, Add conditional in main layout(in authMiddleware)
   * Add res locals
+23. Error handling
+  * A, Add 404 page( rename 404.html to hbs and delete all accept main, then make it in homeController.js then in routes.js)
+  - Redirect missing route to 404
+  * B, Add global error handling (OPTIONAL) (create new file in middlewares folder, errorHandlerMiddleware.js)
+24. Show ERROR notifications  

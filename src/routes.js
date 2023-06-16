@@ -5,5 +5,8 @@ const userController = require('./controllers/userController') //9. B
 
 router.use(homeController); //7. B
 router.use('/users', userController);//9. B
+router.get('*', (req, res) =>{ //23. A
+    res.redirect('/404') //23. A
+}); //23. A
 
 module.exports = router; //3 D
