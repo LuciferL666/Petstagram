@@ -67,3 +67,4 @@
 18. Return token in cookie
   * Install cookie parser(npm i cookie-parser)
   * A, Config cookie parser(in index.js)
+  * B, Set cookie with token(in userController.js)

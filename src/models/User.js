@@ -17,8 +17,7 @@ const userSchema = new mongoose.Schema({ //10. A
   },
 }); //10. A
 
-userSchema
-  .virtual("repeatPassword") //10. C
+userSchema.virtual('repeatPassword') //10. C
   .set(function (value) {//10. C
     
     if (this.password !== value) {//10. C
@@ -27,9 +26,9 @@ userSchema
     } //10. C
   }); //10. C
 
-userSchema.pre("save", async function () { //15. A
+userSchema.pre('save',  async function () { //15. A
  
-  const hash = await bcrypt.hash(this.password, 10); //15. A
+  const hash =  await bcrypt.hash(this.password, 10); //15. A
 
   this.password = hash; //15. A
 }); //15. A
