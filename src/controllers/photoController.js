@@ -32,10 +32,22 @@ res.render('photos/create', {error: getErrorMessage(err)}); // 28. B
 router.get('/:photoId/details', async (req, res) =>{ //31. A
 const photoId = req.params.photoId; //31. A
 const photo = await photoManager.getOne(photoId).lean(); //31. A
-const isOwner = req.user._id == photo.owner._id; // 31. C.
+const isOwner = req.user?._id == photo.owner._id; // 31. C.
 
 res.render('photos/details', { photo, isOwner }) //31. A // 31. C
 }); //31. A
 
+router.get('/:photoId/delete', async (req, res)=>{ //32. a
+const photoId = req.params.photoId;//32. A
+    try{
+    await photoManager.delete(req.params.photoId) //32. A
+
+    res.redirect('/photos'); //32. A
+}catch (err){ //32. A
+
+    res.render(`/photos/${photoId}/details`, {error: "Unsuccessful photo deletion"}); //32. A after in photoManager
+}//32. A
+
+}); //32. A
 
 module.exports = router; //28. A

@@ -106,7 +106,8 @@ _______________________________________
 31. A, Details Page(move details.html in folder photos rename it to .hbs and remove all accept main ) THEN IN photoController.js and after in photoManager.js
   - B, Remove all /static from details.hbs and reword hardcore data
   - c, SHOW edit and delete buttons for owner (in photoController.js, then in details.hbs)
-
+  - D, Add comments if you are not owner (in details.hbs) WITH {{#unless}}
+32. A, Delete Pet Photo (in details)
 
 
 
