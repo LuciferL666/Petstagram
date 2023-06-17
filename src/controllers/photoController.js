@@ -3,6 +3,12 @@ const router = require('express').Router();//28. A
 const photoManager = require('../managers/photoManager')  // 28. B
 const { getErrorMessage } = require('../utils/errorHelpers'); // 28. B
 
+router.get('/', async (req, res)=>{ //29. A
+    const photos = await photoManager.getAll().lean(); // 29. B,  GO IN photoManager.js
+res.render('photos', { photos }); //29. B 
+}); //29. A
+
+
 router.get('/create', (req, res)=>{//28. A
 res.render('photos/create'); //28. A
 });//28. A
