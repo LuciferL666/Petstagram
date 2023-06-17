@@ -2,6 +2,7 @@ const router = require('express').Router();//28. A
 
 const photoManager = require('../managers/photoManager')  // 28. B
 const { getErrorMessage } = require('../utils/errorHelpers'); // 28. B
+const {isAuth} = require('../middlewares/authMiddleware');
 
 router.get('/', async (req, res)=>{ //29. A
     const photos = await photoManager.getAll().lean(); // 29. B,  GO IN photoManager.js
@@ -9,11 +10,11 @@ res.render('photos', { photos }); //29. B
 }); //29. A
 
 
-router.get('/create', (req, res)=>{//28. A
+router.get('/create', isAuth, (req, res)=>{//28. A
 res.render('photos/create'); //28. A
 });//28. A
 
-router.post('/create', async(req, res)=>{  // 28. B
+router.post('/create', isAuth, async(req, res)=>{  // 28. B
     const photoData = {// 28. B
         ...req.body, // 28. B
         owner: req.user._id, // 28. B
@@ -38,7 +39,7 @@ const isOwner = req.user?._id == photo.owner._id; // 31. C.
 res.render('photos/details', { photo, isOwner }) //31. A // 31. C
 }); //31. A
 
-router.get('/:photoId/delete', async (req, res)=>{ //32. a
+router.get('/:photoId/delete', isAuth, async (req, res)=>{ //32. a
 const photoId = req.params.photoId;//32. A
     try{
     await photoManager.delete(req.params.photoId) //32. A
@@ -51,12 +52,12 @@ const photoId = req.params.photoId;//32. A
 
 }); //32. A
 
-router.get('/:photoId/edit', async (req, res)=>{ //33. A
+router.get('/:photoId/edit', isAuth, async (req, res)=>{ //33. A
     const photo = await photoManager.getOne(req.params.photoId).lean() // 33. A
     res.render('photos/edit', { photo }); //33. A
 });
 
- router.post('/:photoId/edit', async (req, res)=>{ // 33. A
+ router.post('/:photoId/edit', isAuth, async (req, res)=>{ // 33. A
      const photoId = req.params.photoId;
      const photoData = req.body; // 33. A
     try {
@@ -70,7 +71,7 @@ router.get('/:photoId/edit', async (req, res)=>{ //33. A
    
  }); // 33. A then in photoManager.js make it work
 
-router.post('/:photoId/comments', async (req, res)=>{ //34. A
+router.post('/:photoId/comments', isAuth, async (req, res)=>{ //34. A
 const photoId = req.params.photoId; //34. A
 const { message } = req.body; //34. A
 const user = req.user._id; //34. A
