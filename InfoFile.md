@@ -94,8 +94,17 @@
 26. A, Keep username and email if forgot to write password or password missmatch while register 
 _______________________________________
 27. A, Photo model(in modelse new file Photo.js)
-28. Create Photo
+28. Create Photos(create folder photo in views tranfer create.html to the folder change it to hbs and remove all accept main)
+  * A, Create controller(in folder controllers create file photoController.js in main hbs 
+  * In main hbs need to fix catalog href and add photo href)
+  * B, Add the new controller in routes.js and create in manager photoManager.js
 
+
+
+
+
+
+When Use template for other app need to change mongoose.connect name for database 
   CTRL + P (:23 SEND TO 23 ROW)
   CTRL + P SEARCHING BETWEEN FILES
   CTRL + P SEAERCHING (INDEX:5 IT WILL SEND ME TO FILE INDEX TO 5 ROW)
