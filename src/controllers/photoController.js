@@ -50,4 +50,23 @@ const photoId = req.params.photoId;//32. A
 
 }); //32. A
 
+router.get('/:photoId/edit', async (req, res)=>{ //33. A
+    const photo = await photoManager.getOne(req.params.photoId).lean() // 33. A
+    res.render('photos/edit', { photo }); //33. A
+});
+
+ router.post('/:photoId/edit', async (req, res)=>{ // 33. A
+     const photoId = req.params.photoId;
+     const photoData = req.body; // 33. A
+    try {
+        await photoManager.edit(photoId, photoData); // 33. A
+
+       res.redirect(`/photos/${photoId}/details`);
+    } catch (err) { // 33. A
+     res.render('photos/edit', { error: 'Unable to update photo', ...photoData }); // 33. A
+
+    } // 33. A
+   
+ }); // 33. A then in photoManager.js make it work
+
 module.exports = router; //28. A

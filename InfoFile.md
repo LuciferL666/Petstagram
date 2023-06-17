@@ -108,9 +108,11 @@ _______________________________________
   - c, SHOW edit and delete buttons for owner (in photoController.js, then in details.hbs)
   - D, Add comments if you are not owner (in details.hbs) WITH {{#unless}}
 32. A, Delete Pet Photo (in details)
+33. A, Setup Edit Page (first send edit.html to folder photos then change it to hbs and delete all accept main)
+when page is Edit need to have also value all it must look like (input type="text" name="name" placeholder="Name" value="{{photo.name}}") then in photoController.js, and edit button in details.hbs
 
 
-
+error handling must be put on every changing operations like EDIT PAGE for example also, CREATE, UPDATE
 When Use template for other app need to change mongoose.connect name for database 
   CTRL + P (:23 SEND TO 23 ROW)
   CTRL + P SEARCHING BETWEEN FILES
