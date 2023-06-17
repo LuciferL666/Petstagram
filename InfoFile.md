@@ -101,7 +101,7 @@ _______________________________________
 29. A, Create Catalog (move catalog.html to photos in views then rename to index.hbs for easier use and delete all accept main, remove /static from file then in photoController )
   - Remove hardcord data from index.hbs accept one card then in folder partials create file pet.hbs and move the last card there and then change it from (start pet photo), then in index.hbs between (Start Pet Photos Post Section  AND If there are no photo yet!) MUST USE EACH
   - B, THEN we must put photos collection in photoController.js
-30. Owner for the photo (in file photoManager.js must use .populate('owner) and then in petPhoto.hbs for name must use {{owner.username}} and {{location}})
+30. Owner of the photo (in file photoManager.js must use .populate('owner) and then in petPhoto.hbs for name must use {{owner.username}} and {{location}})
 
 
 
