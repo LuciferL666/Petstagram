@@ -13,7 +13,8 @@ const userSchema = new mongoose.Schema({ //10. A
   },
   email: { //10. A
     type: String,
-    required: [true, 'Email is required']
+    required: [true, 'Email is required'],
+    //unique: true, //OPTIONAL NOT READY
   },
 }); //10. A
 

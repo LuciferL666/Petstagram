@@ -102,6 +102,10 @@ _______________________________________
   - Remove hardcord data from index.hbs accept one card then in folder partials create file pet.hbs and move the last card there and then change it from (start pet photo), then in index.hbs between (Start Pet Photos Post Section  AND If there are no photo yet!) MUST USE EACH
   - B, THEN we must put photos collection in photoController.js
 30. Owner of the photo (in file photoManager.js must use .populate('owner) and then in petPhoto.hbs for name must use {{owner.username}} and {{location}})
+  * B, Details photo (in petPhotos.hbs)
+31. A, Details Page(move details.html in folder photos rename it to .hbs and remove all accept main ) THEN IN photoController.js and after in photoManager.js
+  - B, Remove all /static from details.hbs and reword hardcore data
+  - c, SHOW edit and delete buttons for owner (in photoController.js, then in details.hbs)
 
 
 
