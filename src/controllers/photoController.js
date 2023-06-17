@@ -33,7 +33,7 @@ router.get('/:photoId/details', async (req, res) =>{ //31. A
 const photoId = req.params.photoId; //31. A
 const photo = await photoManager.getOne(photoId).populate('comments.user').lean(); //31. A
 const isOwner = req.user?._id == photo.owner._id; // 31. C.
-console.log(photo);
+
 
 res.render('photos/details', { photo, isOwner }) //31. A // 31. C
 }); //31. A

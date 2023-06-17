@@ -112,6 +112,10 @@ _______________________________________
 when page is Edit need to have also value all it must look like (input type="text" name="name" placeholder="Name" value="{{photo.name}}") then in photoController.js, and edit button in details.hbs
 34. A, Add comments (in Photo.js after in details.hbs "start add comments form" create method, after go in photoController to make router and then in photoManager)
   - B, Visualization of comments (in details.hbs find "comments-top" and from ('userDetails') and leave only one then take it and put it in folder partials in new file comment.hbs)
+35. A, Profile Page (first rename profile.html to hbs after remove all accept main and remove /static, remove pet photo accept one) after setup path from main.hbs, we make the router in homeController.js AFTER put userData in profile.hbs after back in homeController.js
+
+
+
 
 error handling must be put on every changing operations like EDIT PAGE for example also, CREATE, UPDATE
 When Use template for other app need to change mongoose.connect name for database 
