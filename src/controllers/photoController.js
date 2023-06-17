@@ -31,8 +31,9 @@ res.render('photos/create', {error: getErrorMessage(err)}); // 28. B
 
 router.get('/:photoId/details', async (req, res) =>{ //31. A
 const photoId = req.params.photoId; //31. A
-const photo = await photoManager.getOne(photoId).lean(); //31. A
+const photo = await photoManager.getOne(photoId).populate('comments.user').lean(); //31. A
 const isOwner = req.user?._id == photo.owner._id; // 31. C.
+console.log(photo);
 
 res.render('photos/details', { photo, isOwner }) //31. A // 31. C
 }); //31. A
@@ -68,5 +69,15 @@ router.get('/:photoId/edit', async (req, res)=>{ //33. A
     } // 33. A
    
  }); // 33. A then in photoManager.js make it work
+
+router.post('/:photoId/comments', async (req, res)=>{ //34. A
+const photoId = req.params.photoId; //34. A
+const { message } = req.body; //34. A
+const user = req.user._id; //34. A
+
+await photoManager.addComment(photoId, { user , message }); //34. A
+
+res.redirect(`/photos/${photoId}/details`) //34. A
+}); //34. A
 
 module.exports = router; //28. A
